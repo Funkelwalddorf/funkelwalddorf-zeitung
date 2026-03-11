@@ -410,6 +410,33 @@ mix-blend-mode:screen;
 z-index:2;
 border-radius:18px;
 }
+
+.map-sparkles{
+position:absolute;
+inset:0;
+pointer-events:none;
+z-index:3;
+}
+
+.map-sparkles::before{
+content:"";
+position:absolute;
+inset:0;
+background-image:
+radial-gradient(circle, rgba(255,230,150,0.9) 0 1px, transparent 2px),
+radial-gradient(circle, rgba(255,230,150,0.6) 0 1px, transparent 2px),
+radial-gradient(circle, rgba(255,230,150,0.4) 0 1px, transparent 2px);
+background-size:180px 180px, 260px 260px, 320px 320px;
+background-position:40px 60px, 120px 140px, 80px 200px;
+opacity:0.25;
+animation:mapSparkleDrift 18s linear infinite;
+}
+
+@keyframes mapSparkleDrift{
+0%{transform:translateY(0px)}
+50%{transform:translateY(-8px)}
+100%{transform:translateY(0px)}
+}    
     
 .map-label:hover{
 color:#fff2c8;
@@ -503,6 +530,7 @@ left:21%;
 
 <div class="moon-glow"></div>
 <div class="edge-mist"></div>
+<div class="map-sparkles"></div>
 
 <a class="map-label mondtau" href="mondtau-mitte.html">Mondtau-Mitte</a>
 <a class="map-label werkstatt" href="werkstatt-schmiede.html">Werkstatt / Schmiede</a>
@@ -514,6 +542,7 @@ left:21%;
 Tempel /<br>Baumheiligtum
 </a>
 
+</div>
 </div>
       
 </section>
