@@ -411,6 +411,30 @@ z-index:2;
 border-radius:18px;
 }
 
+.moonlight-glow{
+position:absolute;
+width:120px;
+height:120px;
+border-radius:50%;
+background:radial-gradient(circle, rgba(170,200,255,0.35) 0%, rgba(170,200,255,0.12) 40%, transparent 70%);
+pointer-events:none;
+animation:moonPulse 6s ease-in-out infinite;
+z-index:2;
+transform:translate(-50%,-50%);
+}
+
+@keyframes moonPulse{
+0%{transform:translate(-50%,-50%) scale(0.9);opacity:0.6;}
+50%{transform:translate(-50%,-50%) scale(1.1);opacity:0.9;}
+100%{transform:translate(-50%,-50%) scale(0.9);opacity:0.6;}
+}
+
+/* Position der Mondlicht-Lichtung */
+.moonlight-position{
+top:28%;
+left:71%;
+}
+
 .map-sparkles{
 position:absolute;
 inset:0;
@@ -531,6 +555,7 @@ left:21%;
 <div class="moon-glow"></div>
 <div class="edge-mist"></div>
 <div class="map-sparkles"></div>
+<div class="moonlight-glow moonlight-position"></div>
 
 <a class="map-label mondtau" href="mondtau-mitte.html">Mondtau-Mitte</a>
 <a class="map-label werkstatt" href="werkstatt-schmiede.html">Werkstatt / Schmiede</a>
