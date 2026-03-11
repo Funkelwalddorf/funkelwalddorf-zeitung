@@ -365,6 +365,9 @@ font-size:16px;
 text-shadow:0 0 6px rgba(255,230,150,0.6);
 cursor:pointer;
 transition:all 0.3s ease;
+text-decoration:none;
+white-space:nowrap;
+z-index:3;
 }
 
 .map-label:hover{
@@ -373,35 +376,45 @@ text-shadow:
 0 0 10px #ffe8a0,
 0 0 20px #ffd96b,
 0 0 40px rgba(255,220,120,0.6);
-transform:scale(1.1);
+transform:scale(1.08);
 }
 
 /* Positionen auf der Karte */
 
 .mondtau{
-top:42%;
-left:46%;
-}
-
-.werkstatt{
-top:67%;
-left:16%;
+top:44%;
+left:19%;
 }
 
 .waldwissen{
-top:26%;
-left:22%;
+top:18%;
+left:12%;
 }
 
 .mondlicht{
-top:28%;
-left:68%;
+top:16%;
+left:67%;
+}
+
+.tempel{
+top:39%;
+left:56%;
 }
 
 .markt{
-top:55%;
-left:62%;
-}    
+top:63%;
+left:58%;
+}
+
+.spielstube{
+top:79%;
+left:39%;
+}
+
+.werkstatt{
+top:84%;
+left:18%;
+}
   </style>
 </head>
 <body>
@@ -438,11 +451,13 @@ left:62%;
 
 <img src="funkelwalddorf-karte.png" alt="Karte des Funkelwalddorfes">
  
-<div class="map-label mondtau">Mondtau-Mitte</div>
-<div class="map-label werkstatt">Werkstatt / Schmiede</div>
-<div class="map-label waldwissen">Waldwissen</div>
-<div class="map-label mondlicht">Mondlicht-Lichtung</div>
-<div class="map-label markt">Dorfmarkt</div>
+<a class="map-label mondtau" href="mondtau-mitte.html">Mondtau-Mitte</a>
+<a class="map-label werkstatt" href="werkstatt-schmiede.html">Werkstatt / Schmiede</a>
+<a class="map-label waldwissen" href="waldwissen.html">Waldwissen</a>
+<a class="map-label mondlicht" href="mondlicht-lichtung.html">Mondlicht-Lichtung</a>
+<a class="map-label markt" href="dorfmarkt.html">Dorfmarkt</a>
+<a class="map-label spielstube" href="mondtau-spielstube.html">Mondtau-Spielstube</a>
+<a class="map-label tempel" href="tempel-baumheiligtum.html">Tempel / Baumheiligtum</a>
 
 <div class="magic-point p1"></div>
 <div class="magic-point p2"></div>
