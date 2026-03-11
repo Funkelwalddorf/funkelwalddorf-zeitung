@@ -1,77 +1,106 @@
-index.html
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Mondtau-Bote</title>
 
 <style>
+
 body{
-font-family: Georgia;
-background:#1e2a24;
-color:#f4f1e8;
+background:#1f2723;
+color:#f5f1e6;
+font-family:Georgia;
 margin:0;
 }
 
 header{
-background:#2f3e36;
-padding:30px;
 text-align:center;
-font-size:40px;
+padding:40px;
+font-size:46px;
+background:#2d3832;
+}
+
+.subtitle{
+text-align:center;
+font-size:18px;
+margin-bottom:40px;
+opacity:0.8;
+}
+
+.map{
+text-align:center;
+}
+
+.map img{
+max-width:900px;
+width:95%;
+border-radius:12px;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
 section{
-padding:40px;
 max-width:900px;
 margin:auto;
+padding:40px;
 }
 
 article{
-background:#2a352f;
+background:#2a332e;
 padding:20px;
 margin-bottom:20px;
 border-radius:10px;
 }
 
 h2{
-color:#e8d9a8;
+color:#e6d7a8;
 }
 
 footer{
 text-align:center;
-padding:20px;
-font-size:14px;
-opacity:0.7;
+padding:30px;
+opacity:0.6;
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-Funkelwalddorf Zeitung
+Mondtau-Bote
 </header>
+
+<div class="subtitle">
+Das Dorfblatt aus Mondtau-Mitte
+</div>
+
+<div class="map">
+
+<img src="dorfkarte.png">
+
+</div>
 
 <section>
 
 <article>
 <h2>Willkommen im Funkelwalddorf</h2>
+
 <p>
-Hier erscheinen Neuigkeiten, Geschichten und Ereignisse aus unserem Dorf.
+Diese Karte zeigt das Herz unseres Dorfes.
+Von hier aus führen alle Wege zu den Häusern,
+Werkstätten und Lichtungen unseres Waldes.
 </p>
+
 </article>
 
 <article>
-<h2>Neuigkeiten</h2>
-<p>
-Die erste Ausgabe unserer Dorfzeitung entsteht gerade.
-</p>
-</article>
+<h2>Dorfneuigkeiten</h2>
 
-<article>
-<h2>Nächstes Dorfereignis</h2>
 <p>
-Weitere Informationen folgen bald in der Mondtau-Mitte.
+Hier erscheinen künftig Neuigkeiten,
+Ereignisse und Geschichten aus dem Funkelwalddorf.
 </p>
+
 </article>
 
 </section>
