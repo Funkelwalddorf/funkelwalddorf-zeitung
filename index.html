@@ -411,6 +411,17 @@ z-index:2;
 border-radius:18px;
 }
 
+.map-vignette{
+position:absolute;
+inset:0;
+pointer-events:none;
+border-radius:18px;
+background:radial-gradient(circle at center,
+transparent 55%,
+rgba(0,0,0,0.25) 100%);
+z-index:3;
+}
+
 .moonlight-glow{
 position:absolute;
 top:28%;
@@ -563,8 +574,13 @@ left:21%;
 
 <div class="moon-glow"></div>
 <div class="edge-mist"></div>
+<div class="map-vignette"></div>
 <div class="map-sparkles"></div>
 <div class="moonlight-glow"></div>
+
+... deine Ortsnamen ...
+
+</div>
 
 <a class="map-label mondtau" href="mondtau-mitte.html">Mondtau-Mitte</a>
 <a class="map-label werkstatt" href="werkstatt-schmiede.html">Werkstatt / Schmiede</a>
