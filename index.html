@@ -396,6 +396,20 @@ radial-gradient(circle at 20% 80%, rgba(120,170,255,0.10), transparent 45%);
 mix-blend-mode:screen;
 z-index:1;
 }
+
+.edge-mist{
+position:absolute;
+inset:0;
+pointer-events:none;
+background:
+radial-gradient(circle at 0% 50%, rgba(110,150,220,0.22), transparent 22%),
+radial-gradient(circle at 100% 50%, rgba(110,150,220,0.20), transparent 22%),
+radial-gradient(circle at 50% 0%, rgba(120,160,235,0.16), transparent 20%),
+radial-gradient(circle at 50% 100%, rgba(90,130,210,0.16), transparent 22%);
+mix-blend-mode:screen;
+z-index:2;
+border-radius:18px;
+}
     
 .map-label:hover{
 color:#fff2c8;
@@ -488,6 +502,7 @@ left:21%;
 <img src="funkelwalddorf-karte.png" alt="Karte des Funkelwalddorfes">
 
 <div class="moon-glow"></div>
+<div class="edge-mist"></div>
 
 <a class="map-label mondtau" href="mondtau-mitte.html">Mondtau-Mitte</a>
 <a class="map-label werkstatt" href="werkstatt-schmiede.html">Werkstatt / Schmiede</a>
