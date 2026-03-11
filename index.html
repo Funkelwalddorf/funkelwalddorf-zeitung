@@ -357,6 +357,51 @@ left:62%;
 top:55%;
 left:58%;
 }
+.map-label{
+position:absolute;
+color:#f3dba2;
+font-weight:bold;
+font-size:16px;
+text-shadow:0 0 6px rgba(255,230,150,0.6);
+cursor:pointer;
+transition:all 0.3s ease;
+}
+
+.map-label:hover{
+color:#fff2c8;
+text-shadow:
+0 0 10px #ffe8a0,
+0 0 20px #ffd96b,
+0 0 40px rgba(255,220,120,0.6);
+transform:scale(1.1);
+}
+
+/* Positionen auf der Karte */
+
+.mondtau{
+top:42%;
+left:46%;
+}
+
+.werkstatt{
+top:67%;
+left:16%;
+}
+
+.waldwissen{
+top:26%;
+left:22%;
+}
+
+.mondlicht{
+top:28%;
+left:68%;
+}
+
+.markt{
+top:55%;
+left:62%;
+}    
   </style>
 </head>
 <body>
@@ -392,6 +437,12 @@ left:58%;
 <div class="map-container">
 
 <img src="funkelwalddorf-karte.png" alt="Karte des Funkelwalddorfes">
+ 
+<div class="map-label mondtau">Mondtau-Mitte</div>
+<div class="map-label werkstatt">Werkstatt / Schmiede</div>
+<div class="map-label waldwissen">Waldwissen</div>
+<div class="map-label mondlicht">Mondlicht-Lichtung</div>
+<div class="map-label markt">Dorfmarkt</div>
 
 <div class="magic-point p1"></div>
 <div class="magic-point p2"></div>
