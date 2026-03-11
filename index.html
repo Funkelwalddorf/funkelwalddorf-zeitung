@@ -1,115 +1,220 @@
-
-</html>
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondtau-Bote</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top, rgba(212, 186, 120, 0.10), transparent 35%),
+        linear-gradient(to bottom, #18211d 0%, #1f2a24 35%, #243028 100%);
+      color: #f6f0e4;
+      line-height: 1.7;
+    }
 
-<title>Mondtau-Bote</title>
+    .glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 220, 140, 0.08), transparent 18%),
+        radial-gradient(circle at 85% 15%, rgba(255, 220, 140, 0.06), transparent 16%),
+        radial-gradient(circle at 50% 85%, rgba(255, 220, 140, 0.05), transparent 20%);
+      z-index: 0;
+    }
 
-<style>
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
 
-body{
-background:#1f2723;
-color:#f5f1e6;
-font-family:Georgia;
-margin:0;
-}
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      margin-bottom: 30px;
+    }
 
-header{
-text-align:center;
-padding:40px;
-font-size:46px;
-background:#2d3832;
-}
+    .title {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      color: #f3e2b2;
+      letter-spacing: 1px;
+      margin: 0;
+      text-shadow: 0 0 18px rgba(243, 226, 178, 0.12);
+    }
 
-.subtitle{
-text-align:center;
-font-size:18px;
-margin-bottom:40px;
-opacity:0.8;
-}
+    .subtitle {
+      margin-top: 14px;
+      font-size: 1.1rem;
+      color: #d8caa0;
+      opacity: 0.95;
+    }
 
-.map{
-text-align:center;
-}
+    .intro-box {
+      max-width: 880px;
+      margin: 0 auto 40px;
+      background: rgba(35, 45, 39, 0.72);
+      border: 1px solid rgba(214, 188, 121, 0.22);
+      border-radius: 22px;
+      padding: 26px 28px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(2px);
+      text-align: center;
+    }
 
-.map img{
-max-width:900px;
-width:95%;
-border-radius:12px;
-box-shadow:0 0 20px rgba(0,0,0,0.6);
-}
+    .intro-box p {
+      margin: 0;
+      font-size: 1.08rem;
+      color: #efe7d5;
+    }
 
-section{
-max-width:900px;
-margin:auto;
-padding:40px;
-}
+    .map-frame {
+      background: rgba(31, 40, 35, 0.78);
+      border: 1px solid rgba(214, 188, 121, 0.24);
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.38),
+        inset 0 0 0 1px rgba(255, 232, 180, 0.05);
+      margin-bottom: 42px;
+    }
 
-article{
-background:#2a332e;
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-}
+    .map-frame img {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 18px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+    }
 
-h2{
-color:#e6d7a8;
-}
+    .section-title {
+      text-align: center;
+      color: #ecd69a;
+      font-size: 2rem;
+      margin: 18px 0 24px;
+      text-shadow: 0 0 12px rgba(236, 214, 154, 0.08);
+    }
 
-footer{
-text-align:center;
-padding:30px;
-opacity:0.6;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 10px;
+    }
 
-</style>
+    .card {
+      background: rgba(39, 49, 43, 0.78);
+      border: 1px solid rgba(214, 188, 121, 0.18);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.30);
+      border-color: rgba(230, 205, 136, 0.34);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #efdca8;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #f3ecdd;
+      opacity: 0.95;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 55px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(214, 188, 121, 0.18);
+      color: #cfbf96;
+      font-size: 0.98rem;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 24px 14px 60px;
+      }
+
+      .intro-box,
+      .card,
+      .map-frame {
+        border-radius: 18px;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="glow"></div>
 
-<header>
-Mondtau-Bote
-</header>
+  <div class="page">
+    <header>
+      <h1 class="title">Mondtau-Bote</h1>
+      <div class="subtitle">Das Dorfblatt aus Mondtau-Mitte</div>
+    </header>
 
-<div class="subtitle">
-Das Dorfblatt aus Mondtau-Mitte
-</div>
+    <div class="intro-box">
+      <p>
+        Willkommen im Funkelwalddorf. Zwischen warmem Licht, alten Wegen und
+        stillen Waldpfaden erzählt der Mondtau-Bote von unserem Dorf,
+        seinen Orten, seinen Geschichten und seinen kleinen Wundern.
+      </p>
+    </div>
 
-<div class="map">
+    <div class="map-frame">
+      <img src="DieFertigeKarte.png" alt="Karte des Funkelwalddorfes">
+    </div>
 
-<img src="DieFertigeKarte.png">
+    <h2 class="section-title">Aus dem Dorfblatt</h2>
 
-</div>
+    <div class="cards">
+      <div class="card">
+        <h3>Dorfneuigkeiten</h3>
+        <p>
+          Hier erscheinen Neuigkeiten, Ankündigungen und kleine Entwicklungen
+          aus dem Leben des Funkelwalddorfes.
+        </p>
+      </div>
 
-<section>
+      <div class="card">
+        <h3>Anschlagbrett</h3>
+        <p>
+          Feste, Treffen, besondere Abende und wichtige Hinweise finden hier
+          ihren Platz.
+        </p>
+      </div>
 
-<article>
-<h2>Willkommen im Funkelwalddorf</h2>
+      <div class="card">
+        <h3>Dorfchronik</h3>
+        <p>
+          Besondere Momente, schöne Erinnerungen und kleine Geschichten aus
+          der Gemeinschaft werden in der Chronik bewahrt.
+        </p>
+      </div>
+    </div>
 
-<p>
-Diese Karte zeigt das Herz unseres Dorfes.
-Von hier aus führen alle Wege zu den Häusern,
-Werkstätten und Lichtungen unseres Waldes.
-</p>
-
-</article>
-
-<article>
-<h2>Dorfneuigkeiten</h2>
-
-<p>
-Hier erscheinen künftig Neuigkeiten,
-Ereignisse und Geschichten aus dem Funkelwalddorf.
-</p>
-
-</article>
-
-</section>
-
-<footer>
-Funkelwalddorf • Mondtau-Mitte
-</footer>
-
+    <footer>
+      Funkelwalddorf · Mondtau-Mitte · Mondtau-Bote
+    </footer>
+  </div>
 </body>
 </html>
