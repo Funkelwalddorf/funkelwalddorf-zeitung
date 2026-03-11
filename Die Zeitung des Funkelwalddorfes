@@ -1,0 +1,84 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Funkelwalddorf Zeitung</title>
+
+<style>
+body{
+font-family: Georgia;
+background:#1e2a24;
+color:#f4f1e8;
+margin:0;
+}
+
+header{
+background:#2f3e36;
+padding:30px;
+text-align:center;
+font-size:40px;
+}
+
+section{
+padding:40px;
+max-width:900px;
+margin:auto;
+}
+
+article{
+background:#2a352f;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+}
+
+h2{
+color:#e8d9a8;
+}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+Funkelwalddorf Zeitung
+</header>
+
+<section>
+
+<article>
+<h2>Willkommen im Funkelwalddorf</h2>
+<p>
+Hier erscheinen Neuigkeiten, Geschichten und Ereignisse aus unserem Dorf.
+</p>
+</article>
+
+<article>
+<h2>Neuigkeiten</h2>
+<p>
+Die erste Ausgabe unserer Dorfzeitung entsteht gerade.
+</p>
+</article>
+
+<article>
+<h2>Nächstes Dorfereignis</h2>
+<p>
+Weitere Informationen folgen bald in der Mondtau-Mitte.
+</p>
+</article>
+
+</section>
+
+<footer>
+Funkelwalddorf • Mondtau-Mitte
+</footer>
+
+</body>
+</html>
