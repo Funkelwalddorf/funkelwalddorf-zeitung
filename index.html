@@ -576,17 +576,25 @@ left:21%;
 }
 
 .tree-seal{
-  width:90px;
-  height:90px;
+  width:95px;
+  height:95px;
   object-fit:cover;
 
   border-radius:50%;
-  border:2px solid rgba(214,193,139,0.6);
+  border:2px solid rgba(214,193,139,0.7);
 
   display:block;
-  margin:0 auto 18px auto;
+  margin:0 auto 22px auto;
 
-  box-shadow:0 0 12px rgba(214,193,139,0.35);
+  box-shadow:
+    0 0 14px rgba(214,193,139,0.45),
+    0 0 30px rgba(214,193,139,0.25);
+
+  background: radial-gradient(
+      circle,
+      rgba(255,240,200,0.08) 0%,
+      rgba(0,0,0,0) 70%
+  );
 }
      
   </style>
